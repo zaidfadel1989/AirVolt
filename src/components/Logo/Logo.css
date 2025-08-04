@@ -1,0 +1,26 @@
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* .logo .icon__container,
+.logo .name{
+    font-size: 2rem;
+    color: var(--color-primary);
+    font-weight: 700;
+} */
+
+
+
+.logo .name {
+    font-size: 2rem;
+    color: var(--color-primary); /* This applies to "Ben" */
+    font-weight: 700;
+}
+
+.logo .highlight {
+    color: white; /* This overrides the color for "vix" */
+}
+
+

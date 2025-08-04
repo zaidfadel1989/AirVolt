@@ -1,0 +1,124 @@
+#header{
+    background: var(--glow-1);
+    position: static !important;
+}
+
+#header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top,transparent 10%,var(--color-primary)100%);
+}
+
+
+.highlight {
+  background: linear-gradient(700deg, #3700fc, #0613cc);
+  background-clip: text;
+  -webkit-background-clip: text; /* Needed for Chrome/Safari */
+  -webkit-text-fill-color: transparent; /* Needed to show gradient as text color */
+  display: inline-block; /* Required */
+  font-weight: 600;
+}
+
+
+
+
+#header .container *{
+    text-align: left;
+}
+
+#header .container{
+    padding-top: 30px;
+}
+
+#header .container >.row{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+#header .container .row .column:first-child{
+    float: 1;
+}
+
+
+
+#header .container .buttons__container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+#header .image__container{
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    transition: var(--transition);
+    /* opacity: 0; */
+
+}
+
+
+
+#header .image__container:hover{
+    transform: scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:1024px){
+    #header .container *{
+        text-align: center;
+    }
+
+    #header .container > .row{
+        flex-direction: column;
+    }
+
+    #header .container .buttons__container{
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+}
+
+
+@media(max-width:500px){
+    .highlight {
+  text-decoration: none;
+}
+
+
+.description {
+ white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; /* Optional: Adds "..." if the line is too long */
+
+}
+
+
+
+}
