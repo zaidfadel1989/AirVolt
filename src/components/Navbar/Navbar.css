@@ -3,10 +3,40 @@
     align-items: center;
     gap: 20px;
     justify-content: space-between;
-    padding:10px 20px;
+    padding:19px 20px;
     position: relative;
     z-index: 300;
 }
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo .icon__container img {
+  width: 120px; /* Increase image size */
+  height: auto;
+  margin-left: 50px; /* move right by 20px */
+
+}
+
+.logo .name {
+  font-size: 2.5rem; /* Bigger text */
+}
+
+.logo .highlight {
+  font-size: 2.5rem; /* Match text size for highlight */
+}
+
+
+
+
+
+
+
 
 .navbar .logo .name{
     color: var(--color-text);
@@ -35,7 +65,7 @@
 .navbar .box{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
 }
 
 .navbar .nav__tabs .tab{
@@ -121,6 +151,16 @@
     display: block;
 }
 
+
+
+
+.logo .icon__container img {
+  width: 100px; /* smaller default size */
+  height: auto;
+  margin-left: 20px; /* adjust spacing */
+}
+
+
 }
 
 
@@ -131,6 +171,14 @@
 @media (max-width:500px){
 .navbar .contact__btn{
     display: none;
+
+   
+}
+
+.logo .icon__container img {
+  width: 100px; /* smaller default size */
+  height: auto;
+  margin-left: 20px; /* adjust spacing */
 }
 
 }

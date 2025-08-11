@@ -274,13 +274,13 @@ export const contacts = [
     link: "https://wa.me/17735435969",
     button: "Chat on WhatsApp"
   },
-  {
-    name: "Address",
-    value: "111 Westover Ln, Schaumburg IL",
-    icon: <FaMapMarkerAlt />,
-    link: "https://www.google.com/maps?q=111+Westover+Ln,+Schaumburg,+IL",
-    button: "Find Us"
-  },
+  // {
+  //   name: "Address",
+  //   value: "111 Westover Ln, Schaumburg IL",
+  //   icon: <FaMapMarkerAlt />,
+  //   link: "https://www.google.com/maps?q=111+Westover+Ln,+Schaumburg,+IL",
+  //   button: "Find Us"
+  // },
   
 ];
 

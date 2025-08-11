@@ -10,7 +10,7 @@ const Logo = () => {
         <PiBuildingsFill/>
         <img src={img1} alt="Logo" />
         </div>
-<h1 className='name'>AirVolt<span className="highlight">PRO</span></h1>
+{/* <h1 className='name'>AirVolt<span className="highlight">PRO</span></h1> */}
     </div>
   )
 }

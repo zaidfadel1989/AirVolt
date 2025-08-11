@@ -50,6 +50,12 @@ font-weight: 600;
 }
 
 
+#footer .logo {
+  padding-bottom: 10px; /* increase space below logo */
+  margin-right: 50px;
+}
+
+
 #footer .newsletter .control__container{
     display: flex;
     align-items: stretch;
