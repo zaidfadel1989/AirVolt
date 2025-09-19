@@ -8,6 +8,10 @@
 }
 
 
+
+
+
+
 .service__card:hover{
     border-color: var(--color-primary);
     background: var(--color-ui-variant);
