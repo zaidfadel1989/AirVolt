@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding: 2rem;
   background: linear-gradient(135deg, #3498db, #2c3e50);
   border-radius: 15px;
@@ -26,13 +26,6 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-}
-
-.electric-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 .electric-title-text h1 {
@@ -99,11 +92,45 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.industrial-section {
-  margin-top: 2rem;
+.projects-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.industrial-title {
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 100px;
+}
+
+.tab-button.active {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.projects-section {
+  margin-top: 1rem;
+}
+
+.section-title {
   text-align: center;
   margin-bottom: 2rem;
   color: #2c3e50;
@@ -117,7 +144,7 @@
   font-weight: 600;
 }
 
-.industrial-row {
+.images-row {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -125,7 +152,7 @@
   flex-wrap: wrap;
 }
 
-.industrial-card {
+.project-card {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -134,12 +161,12 @@
   background-color: white;
 }
 
-.industrial-card:hover {
+.project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.industrial-image {
+.project-image {
   width: 150px;
   height: 120px;
   object-fit: cover;
@@ -147,7 +174,7 @@
   transition: transform 0.3s ease;
 }
 
-.industrial-card:hover .industrial-image {
+.project-card:hover .project-image {
   transform: scale(1.05);
 }
 
@@ -279,11 +306,21 @@
     max-width: 250px;
   }
   
-  .industrial-title {
+  .projects-tabs {
+    gap: 0.3rem;
+  }
+  
+  .tab-button {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    min-width: 80px;
+  }
+  
+  .section-title {
     font-size: 1.8rem;
   }
   
-  .industrial-image {
+  .project-image {
     width: 120px;
     height: 100px;
   }
@@ -298,12 +335,26 @@
     font-size: 1rem;
   }
   
-  .industrial-image {
+  .project-image {
     width: 100px;
     height: 80px;
   }
   
-  .industrial-title {
+  .section-title {
     font-size: 1.6rem;
+  }
+  
+  .images-row {
+    gap: 0.5rem;
+  }
+  
+  .projects-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    width: 100%;
+    max-width: 200px;
   }
 }
