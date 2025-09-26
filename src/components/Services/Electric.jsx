@@ -154,9 +154,21 @@ const Electric = () => {
     navigate(-1);
   };
 
-  const handleContactClick = () => {
-    navigate('/contact');
-  };
+const handleContactClick = () => {
+  // Try multiple approaches to ensure it works
+  if (window.location.pathname === '/') {
+    // If we're already on home page, scroll to contact
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/#contact');
+    }
+  } else {
+    // Navigate to home page with contact hash
+    navigate('/#contact');
+  }
+};
 
   const handleImageClick = (image, gallery) => {
     setSelectedImage(image);

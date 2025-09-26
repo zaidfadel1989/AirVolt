@@ -294,16 +294,20 @@
     font-size: 2rem;
   }
   
+  /* FIXED: Buttons side by side on mobile */
   .electric-header-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 1rem;
     width: 100%;
   }
   
   .back-button-contact-style,
   .contact-us-button {
-    width: 100%;
-    max-width: 250px;
+    width: auto;
+    min-width: 120px;
+    max-width: 45%;
+    flex: 1;
   }
   
   .projects-tabs {
@@ -333,6 +337,20 @@
   
   .electric-title-text p {
     font-size: 1rem;
+  }
+  
+  /* Ensure buttons stay side by side on very small screens */
+  .electric-header-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .back-button-contact-style,
+  .contact-us-button {
+    min-width: 110px;
+    max-width: 48%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
   }
   
   .project-image {
