@@ -14,7 +14,6 @@
     background: linear-gradient(to top,transparent 10%,var(--color-primary)100%);
 }
 
-
 .highlight {
   background: linear-gradient(700deg, #3700fc, #0613cc);
   background-clip: text;
@@ -23,9 +22,6 @@
   display: inline-block; /* Required */
   font-weight: 600;
 }
-
-
-
 
 #header .container *{
     text-align: left;
@@ -41,14 +37,19 @@
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    align-items: flex-start; /* Changed from default to align items at top */
 }
-
 
 #header .container .row .column:first-child{
-    float: 1;
+    flex: 1;
 }
 
-
+#header .container .row .column:last-child{
+    display: flex;
+    align-items: flex-start; /* Align image to top */
+    justify-content: center;
+    padding-top: 20px; /* Adjust this value to move image up/down */
+}
 
 #header .container .buttons__container{
     display: flex;
@@ -57,32 +58,18 @@
     margin-top: 30px;
 }
 
-
 #header .image__container{
     width: 100%;
     max-width: 450px;
-    margin: auto;
+    margin: 0 auto; /* Remove any top margin that might push it down */
     overflow: hidden;
     border-radius: var(--radius-2);
     transition: var(--transition);
-    /* opacity: 0; */
-
 }
-
-
 
 #header .image__container:hover{
     transform: scale(1.1);
-
-
 }
-
-
-
-
-
-
-
 
 @media(max-width:1024px){
     #header .container *{
@@ -91,34 +78,31 @@
 
     #header .container > .row{
         flex-direction: column;
+        align-items: center; /* Center align for mobile */
+    }
+
+    #header .container .row .column:last-child{
+        padding-top: 10px; /* Less padding on mobile */
+        order: -1; /* Optional: move image above text on mobile */
     }
 
     #header .container .buttons__container{
         justify-content: center;
     }
-
-
-
-
-
-
-
 }
-
 
 @media(max-width:500px){
     .highlight {
-  text-decoration: none;
-}
+        text-decoration: none;
+    }
 
+    .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-.description {
- white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis; /* Optional: Adds "..." if the line is too long */
-
-}
-
-
-
+    #header .container .row .column:last-child{
+        padding-top: 5px; /* Minimal padding on very small screens */
+    }
 }
