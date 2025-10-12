@@ -1,34 +1,110 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    padding:10px 70px;
-    position: relative;
-    z-index: 300;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 300;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
+/* Logo section */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .logo .icon__container img {
-  width: 150px; /* Increase image size */
-  height: auto;
-  margin-right: 15px; /* move right by 20px */
-  margin-bottom: 0px;
+  height: 80px; /* keep same height */
+  width: auto;
+  object-fit: contain;
+  margin-left: 25px;
+
+  /* 👇 this is the key part */
+  transform: scaleX(1.70); /* stretches it 25% wider horizontally */
+  transform-origin: center;
 }
 
+
 .logo .name {
-  font-size: 2.5rem; /* Bigger text */
+  font-size: 1.8rem;
+  color: var(--color-text);
 }
 
 .logo .highlight {
-  font-size: 2.5rem; /* Match text size for highlight */
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.navbar.visible {
+  position: sticky;
+  top: 0;
+  background: var(--color-ui-secondary);
+  box-shadow: var(--shadow-1);
+}
+
+/* Tabs and Buttons */
+.navbar .box {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.navbar .nav__tabs .tab {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--color-white);
+  border-radius: var(--radius-3);
+  transition: background 0.3s ease;
+}
+
+.navbar.visible .nav__tabs .tab {
+  color: var(--color-text);
+}
+
+.navbar .nav__tabs .tab.active {
+  color: var(--color-white);
+  background: var(--gradient-1);
+}
+
+.navbar .contact__btn {
+  background: var(--gradient-1);
+  color: var(--color-white);
+}
+
+.navbar .cancel__btn,
+.navbar .menu__btn {
+  display: none;
+  background: transparent;
+  font-size: 25px;
+}
+
+.navbar .cancel__btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.navbar .menu__btn {
+  font-size: 2rem;
+}
+
+/* Sidebar overlay */
+.sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(1, 1, 1, 0.5);
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: none;
 }
 
 
@@ -38,154 +114,84 @@
 
 
 
-.navbar .logo .name{
-    color: var(--color-text);
-}
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 30px;
+  }
 
-
-.navber .logo .name span{
-    color: var(--color-white);
-}
-
-
-.navbar.visible .logo .name span{
-    color: var(--color-primary);
-}
-
-
-
-.navbar.visible{
-    position: sticky;
-    background: var(--color-ui-secondary);
-    box-shadow: var(--shadow-1);
-}
-
-
-
-.navbar .box{
-    display: flex;
-    align-items: center;
-    gap: 0px;
-}
-
-.navbar .nav__tabs .tab{
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: var(--color-white);
-    border-radius: var(--radius-3);
-}
-.navbar.visible .nav__tabs .tab{
-     color: var(--color-text);
-}
-.navbar .nav__tabs .tab.active{
-    color: var(--color-white);
-    background: var(--gradient-1);
-}
-
-
-.navbar .contact__btn{
-    background: var(--gradient-1);
-    color:var(--color-white)
-}
-
-
-.navbar .cancel__btn, .navbar .menu__btn{
-    display: none;
-    background: transparent;
-    font-size: 25px;
-}
-
-
-.navbar .cancel__btn{
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.navbar .menu_btn{
-    font-size: 2rem;
-}
-
-.sidebar__overlay{
+  .navbar .nav__tabs {
     position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(1, 1, 1, 0.5);
-    z-index: 200;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100%;
     min-height: 100vh;
-    display: none;
-}
-
-@media (max-width:1110px){
-
-  
-
-
-
-
-    .navbar .nav__tabs{
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: -100%;
-        min-height: 100vh;
-        max-width: 350px;
-        display: block;
-        background: var(--color-ui-secondary);
-        transition: var(--transition);
-        z-index: 350;
-        padding:20px;
-        padding-top: 60px;
-    }
-    .navbar .nav__tabs .tab{
-        color: var(--color-text);
-    }
-    .navbar .nav__tabs.open{
-        left: 0;
-    }
-
-    .navbar .cancel__btn,
-    .navbar .menu__btn{
-        display: flex;
-}
-.sidebar__overlay{
+    max-width: 350px;
     display: block;
+    background: var(--color-ui-secondary);
+    transition: var(--transition);
+    z-index: 350;
+    padding: 20px;
+    padding-top: 60px;
+  }
+
+  .navbar .nav__tabs .tab {
+    color: var(--color-text);
+  }
+
+  .navbar .nav__tabs.open {
+    left: 0;
+  }
+
+  .navbar .cancel__btn,
+  .navbar .menu__btn {
+    display: flex;
+  }
+
+  .sidebar__overlay {
+    display: block;
+  }
+
+  .logo .icon__container img {
+    height: 75px;
+    margin-left: 60px;
+    transform: scaleX(2.00);
+  
+  }
+
+  .logo .name,
+  .logo .highlight {
+    font-size: 1.6rem;
+  }
 }
 
 
 
 
-.logo .icon__container img {
-  width: 130px; /* smaller default size */
-  height: auto;
-  margin-right: 20px; /* adjust spacing */
-  margin-top: 10px;
-}
-
-
-}
 
 
 
 
+/* Responsive for small screens */
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px 20px;
+  }
 
-
-@media (max-width:500px){
-.navbar .contact__btn{
+  .navbar .contact__btn {
     display: none;
+  }
 
-   
-}
+   .logo .icon__container img {
+    height: 72px;
+    margin-left: 60px;
+    transform: scaleX(1.80);
+  
+  }
 
-.logo .icon__container img {
-  width: 120px; /* smaller default size */
-  height: auto;
-  margin-right:30px; /* adjust spacing */
-}
-
+  .logo .name,
+  .logo .highlight {
+    font-size: 1.4rem;
+  }
 }
