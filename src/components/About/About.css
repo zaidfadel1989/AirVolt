@@ -90,8 +90,11 @@
     width: 100%;
 }
 
-
-
+/* Added gradient for the primary button */
+#about .btn__primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--color-white);
+}
 
 @media (max-width:900px){
 #about .container{
