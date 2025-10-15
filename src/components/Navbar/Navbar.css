@@ -1,15 +1,17 @@
-.navbar {
+/* Logo link styling */
+.logo-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px 40px;
-  position: relative;
-  z-index: 300;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* Logo section */
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+/* Make sure the logo container styles are applied to the link */
 .logo {
   display: flex;
   align-items: center;
@@ -18,16 +20,13 @@
 }
 
 .logo .icon__container img {
-  height: 80px; /* keep same height */
+  height: 80px;
   width: auto;
   object-fit: contain;
   margin-left: 25px;
-
-  /* 👇 this is the key part */
-  transform: scaleX(1.70); /* stretches it 25% wider horizontally */
+  transform: scaleX(1.70);
   transform-origin: center;
 }
-
 
 .logo .name {
   font-size: 1.8rem;
@@ -37,6 +36,18 @@
 .logo .highlight {
   font-size: 1.8rem;
   color: var(--color-primary);
+}
+
+/* Rest of your existing CSS remains the same */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 300;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.visible {
@@ -150,7 +161,6 @@
     height: 75px;
     margin-left: 60px;
     transform: scaleX(2.00);
-  
   }
 
   .logo .name,
@@ -173,7 +183,6 @@
     height: 72px;
     margin-left: 60px;
     transform: scaleX(1.80);
-  
   }
 
   .logo .name,

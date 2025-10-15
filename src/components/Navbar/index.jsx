@@ -41,8 +41,16 @@ const Navbar = () => {
     <nav className={`navbar ${visible ? 'visible' : ''}`} ref={container}>
       {open && <div className="sidebar__overlay" onClick={() => setOpen(false)}></div>}
 
-      {/* Logo Section */}
-      <Logo />
+      {/* Logo Section - NOW CLICKABLE */}
+      <Link 
+        to="home" 
+        smooth={true} 
+        duration={500} 
+        className="logo-link"
+        onClick={() => setOpen(false)}
+      >
+        <Logo />
+      </Link>
 
       {/* Navigation Tabs */}
       <div className={`box nav__tabs ${open ? 'open' : ''}`}>

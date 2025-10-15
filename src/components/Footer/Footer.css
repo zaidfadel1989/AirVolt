@@ -5,7 +5,7 @@
   border-top: 4px solid var(--color-primary);
 }
 
-/* Footer Header with Logo - SMALLER SIZE */
+/* Footer Header with Logo - WIDER but NOT TALLER */
 #footer .footer-header {
   text-align: center;
   margin-bottom: 40px;
@@ -18,25 +18,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: 30px 0;
 }
 
+/* Make the logo WIDER but maintain height */
 #footer .footer-logo svg,
 #footer .footer-logo img {
-  width: 120px !important;
-  height: auto !important;
-  transform: scale(1);
+  width: 140px !important;  /* Increased width */
+  height: auto !important;  /* Let height adjust automatically */
+  object-fit: contain;
+  transform: scale(1.2);    /* Scale both dimensions */
 }
 
 #footer .footer-logo > * {
-  transform: scale(1.1);
+  transform: scaleX(1.4);   /* Horizontal scaling only */
   display: block;
   margin: 0 auto;
+  max-width: 100%;          /* Prevent overflow */
 }
 
 #footer .brand-tagline h3 {
   font-size: 24px;
-  margin: 20px 0 12px 0;
+  margin: 25px 0 12px 0;
   color: var(--color-primary);
   font-weight: 700;
 }
@@ -355,14 +358,16 @@
     padding-bottom: 20px;
   }
 
+  /* Adjust wider logo for mobile */
   #footer .footer-logo svg,
   #footer .footer-logo img {
-    width: 100px !important;
-    transform: scale(1);
+    width: 180px !important;  /* Wider for mobile */
+    height: 50px !important;  /* Fixed height */
+    transform: scaleX(1.1);   /* Horizontal scaling only */
   }
 
   #footer .footer-logo > * {
-    transform: scale(1);
+    transform: scaleX(1.2);   /* Horizontal scaling only */
   }
 
   #footer .brand-tagline h3 {
@@ -423,9 +428,16 @@
     padding-bottom: 15px;
   }
 
+  /* Further adjust for small mobile */
   #footer .footer-logo svg,
   #footer .footer-logo img {
-    width: 80px !important;
+    width: 150px !important;  /* Wider for small mobile */
+    height: 45px !important;  /* Fixed height */
+    transform: scaleX(1);     /* No additional scaling */
+  }
+
+  #footer .footer-logo > * {
+    transform: scaleX(1);     /* No additional scaling */
   }
 
   #footer .brand-tagline h3 {

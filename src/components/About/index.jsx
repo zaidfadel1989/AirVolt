@@ -118,7 +118,7 @@ useGSAP(()=>{
             </div>
             <div className='details'>
               <p className="text__muted">Customer</p>
-              <h3>Support</h3>
+              <h3>Free Estimate</h3>
             </div>
           </div>
 

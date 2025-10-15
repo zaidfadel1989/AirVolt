@@ -90,28 +90,28 @@ export const teams = [
       {name:"Instagram",icon:<FaInstagram/>,url:"http://instagram.com"},
     ]
   },
-  {
-    name:"Lawrence Onu",
-    title:"Technician",
-    profile:member3,
-    social:[
-      {name:"Facebook",icon:<CiFacebook/>,url:"http://facebook.com"},
-      {name:"LinkedIn",icon:<CiLinkedin/>,url:"http://linkedin.com"},
-      {name:"Youtube",icon:<FaYoutube/>,url:"https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1"},
-      {name:"Instagram",icon:<FaInstagram/>,url:"http://instagram.com"},
-    ]
-  },
-  {
-    name:"Joy Eze",
-    title:"Technician",
-    profile:member4,
-    social:[
-      {name:"Facebook",icon:<CiFacebook/>,url:"http://facebook.com"},
-      {name:"LinkedIn",icon:<CiLinkedin/>,url:"http://linkedin.com"},
-      {name:"Youtube",icon:<FaYoutube/>,url:"https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1"},
-      {name:"Instagram",icon:<FaInstagram/>,url:"http://instagram.com"},
-    ]
-  },
+  // {
+  //   name:"Lawrence Onu",
+  //   title:"Technician",
+  //   profile:member3,
+  //   social:[
+  //     {name:"Facebook",icon:<CiFacebook/>,url:"http://facebook.com"},
+  //     {name:"LinkedIn",icon:<CiLinkedin/>,url:"http://linkedin.com"},
+  //     {name:"Youtube",icon:<FaYoutube/>,url:"https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1"},
+  //     {name:"Instagram",icon:<FaInstagram/>,url:"http://instagram.com"},
+  //   ]
+  // },
+  // {
+  //   name:"Joy Eze",
+  //   title:"Technician",
+  //   profile:member4,
+  //   social:[
+  //     {name:"Facebook",icon:<CiFacebook/>,url:"http://facebook.com"},
+  //     {name:"LinkedIn",icon:<CiLinkedin/>,url:"http://linkedin.com"},
+  //     {name:"Youtube",icon:<FaYoutube/>,url:"https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1"},
+  //     {name:"Instagram",icon:<FaInstagram/>,url:"http://instagram.com"},
+  //   ]
+  // },
 ]
 
 export const projects = [
