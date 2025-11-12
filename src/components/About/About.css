@@ -5,16 +5,24 @@
 
 #about .container{
     display: grid;
-    grid-template-columns: 400px auto;
+    grid-template-columns: 45% 55%; /* Use percentages */
     gap: 30px;
 }
-
 
 #about .company__photo{
     border-radius: var(--radius-2);
     overflow: hidden;
-    max-width: 400px;
+    width: 100%;
+    height: 500px; /* Set fixed height */
     margin: auto;
+}
+
+#about .company__photo img {
+    width: 100%;
+    height: 100%; /* Make image fill container */
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 
