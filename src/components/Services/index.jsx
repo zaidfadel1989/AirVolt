@@ -44,13 +44,13 @@ const Services = () => {
           {/* 👇 Make Electric card clickable */}
 <Link to="/electric" className="service__item">
   <img src={blog1} alt="Service 1" className="service__img" />
-  <h4 className="service__title">Electric</h4>
+  <h4 className="service__title">Choose Electric Service</h4>
 </Link>
 
           {/* HVAC card stays the same for now */}
           <Link to="/hvac" className="service__item">
   <img src={service2} alt="HVAC Service" className="service__img" />
-  <h4 className="service__title">HVAC</h4>
+  <h4 className="service__title">Choose HVAC Service</h4>
 </Link>
         </div>
       </div>

@@ -267,7 +267,7 @@ const handleContactClick = () => {
       <div className="electric-header">
         <div className="electric-icon-title">
           <div className="electric-title-text">
-            <h1>AirVoltPRO</h1>
+            <h1>AirVoltPRO.Inc</h1>
             <p>HVAC SERVICES</p>
           </div>
         </div>

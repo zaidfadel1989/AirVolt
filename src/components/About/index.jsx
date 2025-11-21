@@ -94,8 +94,8 @@ useGSAP(()=>{
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Consultation</p>
-              <h3>Free</h3>
+              <p className="text__muted">New Service</p>
+              <h3>Installation</h3>
             </div>
           </div>
 
@@ -105,31 +105,70 @@ useGSAP(()=>{
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Expert</p>
-              <h3>Engineers</h3>
+              <p className="text__muted">Electrical</p>
+              <h3>Upgrade</h3>
             </div>
           </div>
 
-
-
-            <div className='row'>
+<div className='row'>
             <div className='icon__container'>
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Customer</p>
-              <h3>Free Estimate</h3>
+              <p className="text__muted">Lighting</p>
+              <h3>Fixture</h3>
             </div>
           </div>
 
-
-            <div className='row'>
+          <div className='row'>
             <div className='icon__container'>
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Quality</p>
+              <p className="text__muted">Troubleshooting</p>
               <h3>Service</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted">Residential HVAC</p>
+              <h3>Electrician</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted">EV</p>
+              <h3>Chargers</h3>
+            </div>
+          </div>
+
+
+            <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted">Commercial HVAC</p>
+              <h3></h3>
+            </div>
+          </div>
+
+
+            <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted">Insdustrial HVAC</p>
+              <h3></h3>
             </div>
           </div>
 
