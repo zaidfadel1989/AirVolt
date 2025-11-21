@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Services from "./components/Services";
-import Teams from "./components/Teams";
+// import Teams from "./components/Teams";
 import Project from "./components/Project";
 import Testimonial from "./components/Testmonial";
 import FAQ from "./components/FAQ";
@@ -22,7 +22,7 @@ function Home() {
       <Header />
       <About />
       <Services />
-      <Teams />
+      {/* <Teams /> */}
       <Project />
       <Testimonial />
       <Contact />

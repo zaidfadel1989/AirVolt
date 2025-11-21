@@ -1,4 +1,4 @@
-#team .teams__container{
+/* #team .teams__container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
@@ -86,4 +86,4 @@
         height: 1.8rem;
         font-size: 16px;
     }
-}
+} */
