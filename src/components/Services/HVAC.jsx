@@ -12,6 +12,12 @@ import HVAC6 from '../../assets/HVAC/HVAC6.jpg';
 import HVAC7 from '../../assets/HVAC/HVAC7.jpg';
 import HVAC8 from '../../assets/HVAC/HVAC8.jpg';
 import HVAC9 from '../../assets/HVAC/HVAC9.jpg';
+import HVAC10 from '../../assets/HVAC/HVAC10.jpg';
+import HVAC11 from '../../assets/HVAC/HVAC11.jpg';
+import HVAC12 from '../../assets/HVAC/HVAC12.jpg';
+import HVAC13 from '../../assets/HVAC/HVAC13.jpg';
+
+
 
 const HVAC = () => {
   const navigate = useNavigate();
@@ -27,15 +33,15 @@ const HVAC = () => {
   }, []);
 
   // All HVAC images array
-  const hvacImages = [
-    HVAC1, HVAC2, HVAC3, HVAC4, HVAC5,
-    HVAC6, HVAC7, HVAC8, HVAC9
-  ];
+ const hvacImages = [
+  HVAC1, HVAC2, HVAC3, HVAC4, HVAC5,
+  HVAC6, HVAC7, HVAC8, HVAC9,
+  HVAC10, HVAC11, HVAC12, HVAC13
+];
 
-  // Split images into rows for better layout
-  const hvacFirstRow = hvacImages.slice(0, 5);
-  const hvacSecondRow = hvacImages.slice(5, 9);
-
+// Split images into rows for better layout
+const hvacFirstRow = hvacImages.slice(0, 7); // Gets indexes 0-4 (5 images)
+const hvacSecondRow = hvacImages.slice(5); // Gets indexes 5-9 (5 images)
   const handleBackClick = () => {
     navigate(-1);
   };
@@ -101,6 +107,14 @@ const HVAC = () => {
             <span className="service-type">Industrial</span>
             <span className="service-type">Residential</span>
             <span className="service-type">Commercial</span>
+            <span className="service-type">AC Installation</span>
+            <span className="service-type">AC Repair</span>
+            <span className="service-type">Furnace Installation</span>
+            <span className="service-type">Furnace Repair</span>
+            <span className="service-type">Water Heaters</span>
+
+
+
           </div>
         </div>
       </center>

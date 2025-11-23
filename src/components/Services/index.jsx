@@ -36,7 +36,7 @@ const Services = () => {
       <div className='container'>
         <div className='services__top'>
           <h1 className='title'>Our <span className='g-text'>Services</span></h1>
-          <h3 className='sub__title'>We specialize in strategic construction innovation.</h3>
+          <h3 className='sub__title'>Advanced HVAC systems paired with precise, high-quality electrical services.</h3>
         </div>
         <br />
 

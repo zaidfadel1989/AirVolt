@@ -62,7 +62,7 @@ useGSAP(()=>{
     <section  id='project'ref={container}>
       <div className='project__top'>
         <h1 className='title'>Our<span className='g-text'> Porjects</span></h1>
-        <h3 className='sub__title'>Innovative construction projects, exceptional craftsmanship.
+        <h3 className='sub__title'>Innovative HVAC solutions and exceptional electrical craftsmanship.
         </h3>
       </div>
       <Slider {...settings} className='projects__container'>

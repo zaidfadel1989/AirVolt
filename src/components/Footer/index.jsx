@@ -13,7 +13,7 @@ const Footer = () => {
             {/* Brand Column */}
             <div className="footer-column brand-column">
               <div className="brand-info">
-                <h3 className="brand-title">AirVoltPro</h3>
+                <h3 className="brand-title">AirVoltPro.Inc</h3>
                 <p className="brand-tagline">
                   Your Trusted Electrical & HVAC Experts. Professional, reliable service for Chicago homes and businesses.
                 </p>
@@ -46,8 +46,8 @@ const Footer = () => {
                 <div className="contact-item">
                   <div className="contact-icon">📍</div>
                   <div className="contact-details">
-                    <p>Chicago, IL, USA</p>
-                    <span>Serving Chicago & Suburbs</span>
+                    <p>Illinois, USA</p>
+                    <span>Serving <strong>Cook County, DuPage County,</strong> the Surrounding Suburbs, and <strong>Areas Within a 50-Mile</strong> Radius</span>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -98,10 +98,10 @@ const Footer = () => {
         <div className="container">
           {/* Company Info */}
           <div className="company-info">
-            <p className="company-name">AirVoltPro Electrical & HVAC Solutions</p>
-            <p className="license-info">IL License #HVAC-123456 | Based in Chicago, IL, USA</p>
+            <p className="company-name">AirVoltPro.Inc Electrical & HVAC Solutions</p>
+            <p className="license-info">IL License #HVAC-123456 | Based in Illinois, USA</p>
             <p className="service-area">
-              <strong>Service Areas:</strong> Chicago and surrounding suburbs within 30-mile radius
+              <strong>Service Areas:</strong> Serving <strong>Cook County, DuPage County,</strong> the Surrounding Suburbs, and <strong>Areas Within a 50-Mile</strong> Radius
             </p>
           </div>
 

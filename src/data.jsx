@@ -116,40 +116,35 @@ export const teams = [
 
 export const projects = [
   {
-    title:"Residential Development Project",
+    title:"Industrial Electric",
     image:building_5,
-    description:`A comprehensive residential development involving the construction of a new 
-        housing community from initial site clearing and preparation to final home construction and landscaping`,
+    description:`Newly installed commercial rooftop HVAC unit mounted on a reinforced curb, providing efficient climate control and improved airflow for the building. Designed for durability and optimal performance in demanding environments`,
   },
-  {
-    title:"Commercial Office Building",
-    image:building_6,
-    description:`The construction of a multi-story office building including all 
-       architectural and structural design, coordination of specialized trades for 
-       HVAC and electrical systems, and complete project oversight.`,
-  },
-  {
-    title:"Retail Space Renovation",
-    image:building_7,
-    description:`Transforming an outdated retail store into a modern commercial space, 
-    involving interior demolition, new layout design, installation of new fixtures, 
-    and updating utilities.`,
-  },
-  {
-    title:"Industrial Warehouse Construction",
+    {
+    title:"Industrial Electric",
     image:building_8,
-    description:`Building a large-scale industrial warehouse, including land clearing,
-     foundation work, steel structure erection, and complete construction management 
-     from start to finish.`,
+    description:`Industrial electrical and mechanical setup featuring control panels, safety disconnects, conduit routing, and a vertical fire-suppression riser. Designed for reliable operation and safety compliance in a manufacturing environment.`,
   },
   {
-    title:"Historic Building Restoration",
+    title:"Industrial Electric",
     image:building_9,
-    description:`Restoring and renovating a historic building to preserve its architectural integrity while updating it to meet modern standards, involving meticulous 
-    craftsmanship and specialized restoration techniques.`,
+    description:`Industrial electrical panel installation with conduit routing, control boxes, and equipment wiring. This setup supports safe power distribution and operational reliability within a manufacturing environment.`,
   },
+  
   {
-    title:"Educational Facility Expansion",
+    title:"Residential HVAC",
+    image:building_6,
+    description:`Precision HVAC diagnostics performed with advanced digital tools to ensure accurate system performance and reliable comfort`,
+  },
+  
+  {
+    title:"Commercial HVAC",
+    image:building_7,
+    description:`Heavy-duty crane lift of a commercial HVAC unit during a scheduled replacement project. The old unit is safely removed to make way for an upgraded, energy-efficient system.`,
+  },
+
+  {
+    title:"Industrial Electric",
     image:building_10,
     description:`Expanding an existing school with new classrooms and facilities, encompassing all phases from initial design and site preparation to construction and 
     final project management to ensure timely completion.`,
@@ -159,34 +154,31 @@ export const projects = [
 
 export const testimonial = [
   {
-    image:profile2,
-    name:'Samuel Eze',
-    review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea veniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud exercitation ullamco laboris`
+    image: profile2,
+    name: 'Samuel Eze',
+    review: `Excellent service from start to finish. The team was professional, timely,
+             and delivered exactly what we needed. I highly recommend them for any
+             HVAC or electrical project.`
   },
   {
-    image:profile3,
-    name:'Emmanuel Joseph',
-    review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
+    image: profile3,
+    name: 'Emmanuel Joseph',
+    review: `Great experience overall. They explained everything clearly and made sure
+             the job was done right. Quality work and very dependable service.`
   },
   {
-    image:profile4,
-    name:'Gloria Chiwendu',
-    review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea veniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud exercitation ullamco laboris`
+    image: profile4,
+    name: 'Gloria Chiwendu',
+    review: `Their attention to detail is impressive. From inspection to installation,
+             everything was handled with care. Outstanding customer service and
+             excellent workmanship.`
   },
   {
-    image:profile5,
-    name:'Precious Stone',
-    review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
+    image: profile5,
+    name: 'Precious Stone',
+    review: `Reliable, efficient, and highly skilled. The team completed the project
+             on time and exceeded expectations. I’m very satisfied with the results.`
   }
-
 ];
 
 
@@ -255,23 +247,23 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa"
 export const contacts = [
   {
     name: "Email",
-    value: "zfadel989@gmail.com",
+    value: "info@AlrvoltPro.com",
     icon: <FaEnvelope />,
-    link: "mailto:zfadel989@gmail.com",
+    link: "mailto:Info@AlrvoltPro.com",
     button: "Send Email"
   },
   {
     name: "Phone",
-    value: "(123) 456-7890",
+    value: "(847)-800-3443",
     icon: <FaPhone />,
-    link: "tel:1234567890",
+    link: "tel:8478003443",
     button: "Call Now"
   },
   {
     name: "WhatsApp",
-    value: "+1 773-543-5969",
+    value: "+1 847-800-3443",
     icon: <FaWhatsapp />,
-    link: "https://wa.me/17735435969",
+    link: "https://wa.me/8478003443",
     button: "Chat on WhatsApp"
   },
   // {

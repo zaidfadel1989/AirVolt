@@ -81,13 +81,18 @@ useGSAP(()=>{
             <img src={building_3} alt='' />
           </div>
         </div>
-        <p className='text__muted description'>
+       <p className='text__muted description'>
+  <h5> <strong>AirVoltPro</strong>  is a full-service, family-owned HVAC and electrical company proudly serving 
+  <strong> Cook County and DuPage area for over 25 years</strong>. 
+  From day one, we have been committed to delivering high-quality workmanship and exceptional 
+  customer service across both industries. Our philosophy is simple: we provide the same level 
+  of service that we would expect for our own homes and businesses.
 
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-          Quae dicta natus corporis. Aspernatur, adipisci dolorem culpa provident 
-          nemo quo dolores ipsum eaque commodi quasi, ad modi nisi
-          praesentium pariatur eius.
-        </p>
+  This dedication to exceeding customer expectations has driven our growth year after year. 
+  And while we take pride in how far we’ve come, our top priority remains the same — honoring 
+  our promises and ensuring complete satisfaction on every HVAC or electrical project we take on.</h5>
+</p>
+
         <div className='group'>
           <div className='row'>
             <div className='icon__container'>
@@ -151,6 +156,19 @@ useGSAP(()=>{
           </div>
 
 
+<div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted">Residential HVAC</p>
+              <h3></h3>
+            </div>
+          </div>
+
+
+
+
             <div className='row'>
             <div className='icon__container'>
               <FaCheck />
@@ -162,21 +180,13 @@ useGSAP(()=>{
           </div>
 
 
-            <div className='row'>
-            <div className='icon__container'>
-              <FaCheck />
-            </div>
-            <div className='details'>
-              <p className="text__muted">Insdustrial HVAC</p>
-              <h3></h3>
-            </div>
-          </div>
+            
 
           
         </div>
          <div className='buttons__container'>
           <Link to="project" smooth={true} className="btn">Explore</Link>
-          <Link to="Contact" smooth={true} className="btn btn__primary">Get a quote</Link>
+          {/* <Link to="Contact" smooth={true} className="btn btn__primary">Get a quote</Link> */}
 
          </div>
         </div>

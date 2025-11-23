@@ -11,7 +11,9 @@ margin-top: 50px;
 overflow: hidden;
 }
 
-
+#project .slick-slide .details .description {
+    color: #000;   /* makes the text black */
+}
 
 #project .slick-slide{
     height: inherit;

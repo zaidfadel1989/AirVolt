@@ -65,7 +65,7 @@ useGSAP(()=>{
         <h1 className='title'>
           Clients <span className='g-text'>Testimonies</span>
         </h1>
-        <h3 className='sub__title'>What your Clients is saying</h3>
+        <h3 className='sub__title'>What the Clients Are Saying About Us</h3>
         <Slider {...settings} className='testimonial__container'>
           {
           testimonial.map((list,index)=>(
@@ -76,7 +76,7 @@ useGSAP(()=>{
                 </div>
                 <div className='details'>
                 <h3 className='name'>{list.name}</h3>
-                <small className='text__muted'>CEO of benvix</small>
+                <small className='text__muted'></small>
               </div>
               </div>
               <p className='text__muted content'>{list.review}</p>

@@ -206,10 +206,9 @@ const Electric = () => {
       </div>
 
       <div className="projects-tabs">
-        <button className={`tab-button ${currentGallery === 'industrial' ? 'active' : ''}`} onClick={() => setCurrentGallery('industrial')}>Industrial</button>
+                <button className={`tab-button ${currentGallery === 'commercial' ? 'active' : ''}`} onClick={() => setCurrentGallery('commercial')}>Residential</button>
         <button className={`tab-button ${currentGallery === 'commercial' ? 'active' : ''}`} onClick={() => setCurrentGallery('commercial')}>Commercial</button>
-        <button className={`tab-button ${currentGallery === 'evCharger' ? 'active' : ''}`} onClick={() => setCurrentGallery('evCharger')}>EV Charger</button>
-        <button className={`tab-button ${currentGallery === 'installationGenerator' ? 'active' : ''}`} onClick={() => setCurrentGallery('installationGenerator')}>Installation Generator</button>
+        <button className={`tab-button ${currentGallery === 'industrial' ? 'active' : ''}`} onClick={() => setCurrentGallery('industrial')}>Industrial</button>
       </div>
 
       {currentGallery === 'industrial' && (
