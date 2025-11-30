@@ -16,6 +16,9 @@ import HVAC10 from '../../assets/HVAC/HVAC10.jpg';
 import HVAC11 from '../../assets/HVAC/HVAC11.jpg';
 import HVAC12 from '../../assets/HVAC/HVAC12.jpg';
 import HVAC13 from '../../assets/HVAC/HVAC13.jpg';
+import HVAC14 from '../../assets/HVAC/HVAC14.jpg';
+import HVAC15 from '../../assets/HVAC/HVAC15.jpg';
+
 
 
 
@@ -36,7 +39,7 @@ const HVAC = () => {
  const hvacImages = [
   HVAC1, HVAC2, HVAC3, HVAC4, HVAC5,
   HVAC6, HVAC7, HVAC8, HVAC9,
-  HVAC10, HVAC11, HVAC12, HVAC13
+  HVAC11, HVAC12,  HVAC13,HVAC10, HVAC14, HVAC15
 ];
 
 // Split images into rows for better layout

@@ -46,7 +46,7 @@ const Contact = () => {
 
           {/* ✅ Formspree Form */}
           <form 
-            action="https://formspree.io/f/xwpqrvyv"
+            action="https://formspree.io/f/movbpkqr"
             method="POST"
             className='contact__form__middle'
           >

@@ -249,7 +249,7 @@ export const contacts = [
     name: "Email",
     value: "info@AlrvoltPro.com",
     icon: <FaEnvelope />,
-    link: "mailto:Info@AlrvoltPro.com",
+    link: "mailto:info@alrvoltpro.com",
     button: "Send Email"
   },
   {
