@@ -140,7 +140,7 @@ useGSAP(()=>{
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Residential HVAC</p>
+              <p className="text__muted">Residential </p>
               <h3>Electrician</h3>
             </div>
           </div>
@@ -161,8 +161,70 @@ useGSAP(()=>{
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Residential HVAC</p>
-              <h3></h3>
+              <p className="text__muted"></p>
+              <h3>Circuit Breakers</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>New Construction</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Ceiling Exhaust</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Code Violation And Correction</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Expert Installation</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Sustainable Technology</h3>
+            </div>
+          </div>
+
+         
+
+<div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Residential HVAC</h3>
             </div>
           </div>
 
@@ -174,8 +236,48 @@ useGSAP(()=>{
               <FaCheck />
             </div>
             <div className='details'>
-              <p className="text__muted">Commercial HVAC</p>
-              <h3></h3>
+              <p className="text__muted"></p>
+              <h3>Commercial HVAC</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Installs</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Replacement</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Repairs</h3>
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='icon__container'>
+              <FaCheck />
+            </div>
+            <div className='details'>
+              <p className="text__muted"></p>
+              <h3>Maintenance</h3>
             </div>
           </div>
 

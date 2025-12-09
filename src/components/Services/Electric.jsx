@@ -109,13 +109,6 @@ const Electric = () => {
     { type: 'image', src: Residential21 }
   ];
 
-  // Installation Generator media
-  const installationGeneratorMedia = [
-    { type: 'image', src: InstallationGenerator1 },
-    { type: 'image', src: InstallationGenerator2 },
-    { type: 'video', src: InstallationGenerator3 }
-  ];
-
   // For cleaner rows
   const industrialFirstRow = industrialImages.slice(0, 7);
   const industrialSecondRow = industrialImages.slice(7);
@@ -247,6 +240,32 @@ const Electric = () => {
       {currentGallery === 'industrial' && (
         <div className="projects-section">
           <h2 className="section-title">Industrial Projects</h2>
+          
+          {/* Industrial Subcategory Divs - Non-clickable */}
+          <div className="industrial-subcategories">
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Electrical Service Wiring
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Data Center & Wiring
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Indestrial Power Panels
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Square D Switchgear and Distribution Panels
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Industrial Lighting and Circulation
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Indestrial Electrical Cabinets
+            </div>
+            <div className="industrial-subcategory industrial-subcategory-active">
+              Underground Electrical Installation
+            </div>
+          </div>
+
           <div className="images-row">
             {industrialFirstRow.map((img, i) => (
               <div key={i} className="project-card" onClick={() => handleImageClick(img, 'industrial')}>
@@ -268,6 +287,26 @@ const Electric = () => {
       {currentGallery === 'commercial' && (
         <div className="projects-section">
           <h2 className="section-title">Commercial Projects</h2>
+          
+          {/* Commercial Subcategory Divs - Non-clickable */}
+          <div className="commercial-subcategories">
+            <div className="commercial-subcategory commercial-subcategory-active">
+              Commercial Electric Service Maintenance
+            </div>
+            <div className="commercial-subcategory commercial-subcategory-active">
+              Commercial Electrical Systems
+            </div>
+            <div className="commercial-subcategory commercial-subcategory-active">
+              Retail Lighting Services
+            </div>
+             <div className="commercial-subcategory commercial-subcategory-active">
+              Commercial Lighting Installation
+            </div>
+             <div className="commercial-subcategory commercial-subcategory-active">
+              Office Lighting Installation
+            </div>
+          </div>
+
           <div className="images-row">
             {commercialFirstRow.map((img, i) => (
               <div key={i} className="project-card" onClick={() => handleImageClick(img, 'commercial')}>
@@ -285,10 +324,23 @@ const Electric = () => {
         </div>
       )}
 
-      {/* Residential (FIXED SECTION) */}
+      {/* Residential */}
       {currentGallery === 'residential' && (
         <div className="projects-section">
           <h2 className="section-title">Residential Projects</h2>
+          
+          {/* Residential Subcategory Divs - Non-clickable */}
+          <div className="residential-subcategories">
+            <div className="residential-subcategory residential-subcategory-active">
+              Residential Ceiling Fans
+            </div>
+            <div className="residential-subcategory residential-subcategory-active">
+              Residential Bathroom Lighting
+            </div>
+            <div className="residential-subcategory residential-subcategory-active">
+              Electrical Service Upgrades
+            </div>
+          </div>
 
           <div className="images-row">
             {residentialMedia.map((item, i) => renderMediaItem(item, i, 'residential'))}

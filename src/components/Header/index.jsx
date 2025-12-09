@@ -1,42 +1,41 @@
-import React ,{useRef} from 'react'
+import React, { useRef } from 'react'
 import "./Header.css"
 import { hero_image } from "../../assets";
-import {Link  } from "react-scroll";
+import { Link } from "react-scroll";
 import Achievement from '../Achievement'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react";
 
 const Header = () => {
-const container =useRef(null);
-useGSAP(()=>{
-  const timeline = gsap.timeline({delay:1,stagger:1})
-  timeline
-  .fromTo(
-    ".image__container",
-    {scale:.5,opacity:0,y:150},
-    {scale:1,ease:'sine.in', opacity:1,y:0}
-  )
-.from(
-  ".title",
-  {opacity:0,y:-30}
-)
-
-.from(
-  ".description",
-  {opacity:0,y:-30}
-)
-
-.from(
-  ".buttons__container",
-  {opacity:0,y:40}
-)
-
-},{scope:container})
-
+  const container = useRef(null);
+  useGSAP(() => {
+    const timeline = gsap.timeline({ delay: 1, stagger: 1 })
+    timeline
+      .fromTo(
+        ".image__container",
+        { scale: .5, opacity: 0, y: 150 },
+        { scale: 1, ease: 'sine.in', opacity: 1, y: 0 }
+      )
+      .from(
+        ".title",
+        { opacity: 0, y: -30 }
+      )
+      .from(
+        ".description",
+        { opacity: 0, y: -30 }
+      )
+      .from(
+        ".opening-hours",
+        { opacity: 0, y: -20 }
+      )
+      .from(
+        ".buttons__container",
+        { opacity: 0, y: 40 }
+      )
+  }, { scope: container })
 
   return (
     <header id='header'>
-      
       <div className='container full__height'>
         <div className="row">
           <div className='column'>
@@ -44,8 +43,11 @@ useGSAP(()=>{
               Licensed{" "}<br />
               <span className='highlight'>Bonded & Insured</span>
             </h1>
-           <p className='text__muted description'> 
-We're committed to powering your home safely and efficiently.<br />With years of hands-on experience and a passion for precision,<br /> we provide reliable electrical services designed to meet the unique <br />needs of every household. From simple repairs to full installations,<br /> we bring expert care right to your doorstep.            </p>
+            <p className='text__muted description'>
+              We're committed to powering your home safely and efficiently.<br />With years of hands-on experience and a passion for precision,<br /> we provide reliable electrical services designed to meet the unique <br />needs of every household. From simple repairs to full installations,<br /> we bring expert care right to your doorstep.
+            </p>
+            
+            
             
             <div className='buttons__container'>
               <Link to="services" smooth={true} className="btn">Our Services</Link>
@@ -58,9 +60,15 @@ We're committed to powering your home safely and efficiently.<br />With years of
             </div>
           </div>
         </div>
-        <Achievement/>
+        <Achievement />
+        {/* Opening Hours Section */}
+            <div className="opening-hours">
+              <p style={{ margin: 0, lineHeight: '1.6' }}>
+                <strong>Opening Hours:</strong><br />
+                Mon to Sat: 8AM to 6PM
+              </p>
+            </div>
       </div>
-
     </header>
   )
 }

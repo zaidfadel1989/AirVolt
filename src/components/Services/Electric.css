@@ -11,6 +11,57 @@
   font-family: 'Arial, sans-serif';
 }
 
+
+
+
+/* Residential Subcategories */
+.residential-subcategories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.residential-subcategory {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: #3498db; /* Same as active tab color */
+  color: white; /* White text like active tab */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  cursor: default; /* Not clickable cursor */
+  pointer-events: none; /* Prevent any interactions */
+}
+
+.residential-subcategory.active {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.residential-subcategory:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  background-color: #3498db; /* Keep same color on hover */
+}
+
+.residential-subcategory.active:hover {
+  background-color: #2980b9;
+}
+
+
+
 .electric-header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +114,90 @@
   letter-spacing: 0.5px;
   backdrop-filter: blur(10px);
 }
+
+
+
+
+
+
+/* Industrial Subcategories - Non-clickable */
+.industrial-subcategories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.industrial-subcategory {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: #3498db; /* Same as active tab color */
+  color: white; /* White text like active tab */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  cursor: default; /* Not clickable cursor */
+  pointer-events: none; /* Prevent any interactions */
+}
+
+/* Remove hover effects since it's not clickable */
+.industrial-subcategory:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  background-color: #3498db; /* Keep same color on hover */
+}
+
+
+
+
+
+
+
+.commercial-subcategories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.commercial-subcategory {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: #3498db; /* Same as active tab color */
+  color: white; /* White text like active tab */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  cursor: default; /* Not clickable cursor */
+  pointer-events: none; /* Prevent any interactions */
+}
+
+.commercial-subcategory:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  background-color: #3498db; /* Keep same color on hover */
+}
+
+
 
 .back-button-contact-style:hover {
   background-color: white;
@@ -383,5 +518,97 @@
   .tab-button {
     width: 100%;
     max-width: 200px;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+ .residential-subcategories {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+   .residential-subcategory {
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .residential-subcategory {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .residential-subcategories,
+  .commercial-subcategories {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .residential-subcategory,
+  .commercial-subcategory {
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .residential-subcategory,
+  .commercial-subcategory {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .residential-subcategories,
+  .commercial-subcategories,
+  .industrial-subcategories {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .residential-subcategory,
+  .commercial-subcategory,
+  .industrial-subcategory {
+    width: 100%;
+    max-width: 300px;
+    min-width: auto;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .residential-subcategory,
+  .commercial-subcategory,
+  .industrial-subcategory {
+    padding: 8px 16px;
+    font-size: 0.8rem;
   }
 }
