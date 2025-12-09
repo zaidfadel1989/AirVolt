@@ -6,6 +6,9 @@ import Achievement from '../Achievement'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react";
 
+// Import the timing image (adjust the path according to your project structure)
+import timingImage from '../../assets/timing.png'; // or from your assets if you prefer
+
 const Header = () => {
   const container = useRef(null);
   useGSAP(() => {
@@ -25,7 +28,7 @@ const Header = () => {
         { opacity: 0, y: -30 }
       )
       .from(
-        ".opening-hours",
+        ".timing-image-container",
         { opacity: 0, y: -20 }
       )
       .from(
@@ -47,26 +50,34 @@ const Header = () => {
               We're committed to powering your home safely and efficiently.<br />With years of hands-on experience and a passion for precision,<br /> we provide reliable electrical services designed to meet the unique <br />needs of every household. From simple repairs to full installations,<br /> we bring expert care right to your doorstep.
             </p>
             
+            {/* Timing Image Section - Replacing the text */}
             
             
             <div className='buttons__container'>
               <Link to="services" smooth={true} className="btn">Our Services</Link>
               <Link to="contact" smooth={true} className="btn btn__primary">Contact Us</Link>
             </div>
+            
           </div>
           <div className="column">
             <div className='image__container'>
               <img src={hero_image} alt="Electrician at work" />
             </div>
           </div>
+          
         </div>
+        
         <Achievement />
-        {/* Opening Hours Section */}
-            <div className="opening-hours">
-              <p style={{ margin: 0, lineHeight: '1.6' }}>
-                <strong>Opening Hours:</strong><br />
-                Mon to Sat: 8AM to 6PM
-              </p>
+        <div className="timing-image-container">
+              <img 
+                src={timingImage} 
+                alt="Opening Hours: Monday to Saturday 8AM-6PM, Sunday Closed" 
+                style={{ 
+                  maxWidth: '100%', 
+                  height: 'auto',
+                  display: 'block'
+                }}
+              />
             </div>
       </div>
     </header>

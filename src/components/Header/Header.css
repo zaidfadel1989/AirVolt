@@ -15,7 +15,15 @@
     background: linear-gradient(to top,transparent 0%, rgb(255, 0, 0) 90%);
 }
 
+.timing-image-container {
+  margin: 20px 0;
+  max-width: 250px; /* Adjust as needed */
+}
 
+.timing-image-container img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 
 .highlight {
@@ -103,6 +111,11 @@
         text-align: center;
     }
 
+    .timing-image-container {
+  margin: 20px 0;
+  max-width: 218px; /* Adjust as needed */
+}
+
     #header .container > .row{
         flex-direction: column;
         align-items: center; /* Center align for mobile */
@@ -127,6 +140,14 @@
 }
 
 @media(max-width:500px){
+
+
+    .timing-image-container {
+  margin: 20px 0;
+  max-width: 210px; /* Adjust as needed */
+}
+
+
     .highlight {
         text-decoration: none;
     }
