@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import MapImage from "../../assets/Map.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,7 @@ const Footer = () => {
                   <span className="cert-badge">Licensed</span>
                   <span className="cert-badge">Insured</span>
                   <span className="cert-badge">EPA Certified</span>
-                  <span className="cert-badge">NATE Certified</span>
+                  <span className="cert-badge">Bonded</span>
                 </div>
               </div>
             </div>
@@ -47,7 +48,10 @@ const Footer = () => {
                   <div className="contact-icon">📍</div>
                   <div className="contact-details">
                     <p>Illinois, USA</p>
-                    <span>Serving <strong>Cook County, DuPage County,</strong> the Surrounding Suburbs, and <strong>Areas Within a 50-Mile</strong> Radius</span>
+<div className="contact-details">
+  <p>(847)-800-3443</p>
+  <span>info@AlrvoltPro.com</span>
+</div>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -66,32 +70,27 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+<div className="service-map">
+                <h5 className="map-title">Service Area Map</h5>
+                <div className="map-container">
+                  <img 
+                    src={MapImage} 
+                    alt="Service area map covering Cook County, DuPage County, Lake County, Williams County, City of Chicago, and parts of Indiana" 
+                    className="map-image"
+                  />
+                </div>
+                <p className="map-caption">
+                  Serving: <strong>Cook County</strong>, <strong>DuPage County</strong>, <strong>Lake County</strong>, 
+                  <strong>Williams County</strong>, <strong>City of Chicago</strong>, and surrounding areas including parts of <strong>Indiana</strong>
+                </p>
+              </div>
 
-            {/* Newsletter */}
-            <div className="footer-column newsletter-column">
-              <h4 className="column-title">Stay Updated</h4>
-              <p className="newsletter-description">
-                Get maintenance tips, seasonal offers, and energy-saving advice
-              </p>
-              <form className="newsletter-form">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address"
-                  className="newsletter-input"
-                  required
-                />
-                <button type="submit" className="newsletter-btn">
-                  Subscribe
-                </button>
-              </form>
-              <p className="privacy-text">
-                By subscribing, you agree to receive occasional updates. Unsubscribe anytime.
-                <a href="/privacy-policy" className="privacy-link"> Privacy Policy</a>
-              </p>
-            </div>
           </div>
         </div>
       </div>
+
+
+      
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
