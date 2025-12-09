@@ -98,7 +98,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="company-info">
             <p className="company-name">AirVoltPro.Inc Electrical & HVAC Solutions</p>
-            <p className="license-info">IL License #HVAC-123456 | Based in Illinois, USA</p>
+            <p className="license-info">ELECTRICAL CONTRACTORS LICENSE & EPA LICENSE | Based in Illinois, USA</p>
             <p className="service-area">
               <strong>Service Areas:</strong> Serving <strong>Cook County, DuPage County,</strong> the Surrounding Suburbs, and <strong>Areas Within a 50-Mile</strong> Radius
             </p>

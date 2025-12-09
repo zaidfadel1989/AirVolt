@@ -8,7 +8,7 @@ import { IoConstructSharp } from "react-icons/io5";
 import { GrUserManager } from "react-icons/gr";
 import { profile2, profile3,profile4,profile5,
          member1, member2, member3, member4,building_5,building_6,
-         building_7, building_8,building_9,building_10,
+         building_7, building_8,building_9,building_10,building_11,building_12,building_13,building_14,
         blog_1,blog_2,blog_3} from "./assets";
 
 export const navTabs = [
@@ -132,13 +132,23 @@ export const projects = [
   },
   
   {
-    title:"Residential HVAC",
+    title:"Residential Electric",
     image:building_6,
+    description:`Precision HVAC diagnostics performed with advanced digital tools to ensure accurate system performance and reliable comfort`,
+  },
+  {
+    title:"Residential HVAC",
+    image:building_13,
+    description:`Precision HVAC diagnostics performed with advanced digital tools to ensure accurate system performance and reliable comfort`,
+  },
+  {
+    title:"Residential HVAC",
+    image:building_14,
     description:`Precision HVAC diagnostics performed with advanced digital tools to ensure accurate system performance and reliable comfort`,
   },
   
   {
-    title:"Commercial HVAC",
+    title:"Commercial Electric",
     image:building_7,
     description:`Heavy-duty crane lift of a commercial HVAC unit during a scheduled replacement project. The old unit is safely removed to make way for an upgraded, energy-efficient system.`,
   },
@@ -146,6 +156,21 @@ export const projects = [
   {
     title:"Commercial Electric",
     image:building_10,
+    description:`Expanding an existing school with new classrooms and facilities, encompassing all phases from initial design and site preparation to construction and 
+    final project management to ensure timely completion.`,
+  },
+
+
+  {
+    title:"Commercial HVAC",
+    image:building_11,
+    description:`Expanding an existing school with new classrooms and facilities, encompassing all phases from initial design and site preparation to construction and 
+    final project management to ensure timely completion.`,
+  },
+
+   {
+    title:"Commercial HVAC",
+    image:building_12,
     description:`Expanding an existing school with new classrooms and facilities, encompassing all phases from initial design and site preparation to construction and 
     final project management to ensure timely completion.`,
   },
