@@ -126,7 +126,7 @@ export const projects = [
     description:`Industrial electrical and mechanical setup featuring control panels, safety disconnects, conduit routing, and a vertical fire-suppression riser. Designed for reliable operation and safety compliance in a manufacturing environment.`,
   },
   {
-    title:"Industrial Electric",
+    title:"Residential Electric",
     image:building_9,
     description:`Industrial electrical panel installation with conduit routing, control boxes, and equipment wiring. This setup supports safe power distribution and operational reliability within a manufacturing environment.`,
   },
@@ -144,7 +144,7 @@ export const projects = [
   },
 
   {
-    title:"Industrial Electric",
+    title:"Commercial Electric",
     image:building_10,
     description:`Expanding an existing school with new classrooms and facilities, encompassing all phases from initial design and site preparation to construction and 
     final project management to ensure timely completion.`,

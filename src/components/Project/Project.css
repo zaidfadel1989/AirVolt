@@ -11,8 +11,81 @@ margin-top: 50px;
 overflow: hidden;
 }
 
-#project .slick-slide .details .description {
-    color: #000;   /* makes the text black */
+
+
+
+#project .slick-slide img {
+    max-width: 100%; /* Adjust percentage as needed */
+    max-height: 600px; /* Set a maximum height */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+}
+
+#project .image__container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#project .details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+}
+
+#project .details .description {
+    color: white;
+    margin: 20px 0;
+}
+
+#project .slick-slide:hover .details {
+    left: 0;
+}
+
+#project .slick-slide {
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+#project .image__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#project .box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 20px;
+    color: white;
+    z-index: 2;
+}
+
+
+
+
+#project .slick-slide {
+    height: 400px; /* Set slider height */
+    margin: 0 10px; /* Add spacing between slides */
 }
 
 #project .slick-slide{

@@ -40,24 +40,31 @@ useGSAP(()=>{
 },{scope:container})
 
 
-  const settings = {
+const settings = {
     infinite: true,
     speed: 3000,
     slidesToShow: 2,
-    centerMode:true,
-    pauseOnHover:true,
+    centerMode: true,
+    centerPadding: "100px", // Add padding between slides
+    pauseOnHover: true,
     autoplay: true,
-    autoplaySpeed:2000,
-    responsive:[
-      {
-        breakpoint:600,
-        settings:{
-          slidesToShow:1,
-          centerPadding:0,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                centerPadding: "50px",
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                centerPadding: "20px",
+            }
         }
-      }
     ]
-  };
+};
   return (
     <section  id='project'ref={container}>
       <div className='project__top'>
