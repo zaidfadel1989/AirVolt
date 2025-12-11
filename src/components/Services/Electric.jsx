@@ -53,10 +53,10 @@ import Residential19 from '../../assets/Residential/Residential_19.jpg';
 import Residential20 from '../../assets/Residential/Residential_20.jpg';
 import Residential21 from '../../assets/Residential/Residential_21.jpg';
 
-// Installation Generator
-import InstallationGenerator1 from '../../assets/Installation_Generator/Installation_Generator_1.jpg';
-import InstallationGenerator2 from '../../assets/Installation_Generator/Installation_Generator_2.jpg';
-import InstallationGenerator3 from '../../assets/Installation_Generator/Installation_Generator_3.mp4';
+// // Installation Generator
+// import InstallationGenerator1 from '../../assets/Installation_Generator/Installation_Generator_1.jpg';
+// import InstallationGenerator2 from '../../assets/Installation_Generator/Installation_Generator_2.jpg';
+// import InstallationGenerator3 from '../../assets/Installation_Generator/Installation_Generator_3.mp4';
 
 const Electric = () => {
   const navigate = useNavigate();
@@ -71,21 +71,21 @@ const Electric = () => {
     return () => document.body.classList.remove('electric-page');
   }, []);
 
-  // Industrial images
+  // Industrial images (array of strings)
   const industrialImages = [
     Industrial1, Industrial2, Industrial3, Industrial4, Industrial5,
     Industrial6, Industrial7, Industrial8, Industrial9, Industrial10,
     Industrial11, Industrial12, Industrial13
   ];
 
-  // Commercial images
+  // Commercial images (array of strings)
   const commercialImages = [
     Commercial1, Commercial2, Commercial3, Commercial4, Commercial5,
     Commercial6, Commercial7, Commercial8, Commercial9, Commercial10,
     Commercial11, Commercial12
   ];
 
-  // Residential: FIXED → now using {type, src}
+  // Residential media (array of objects with type)
   const residentialMedia = [
     { type: 'image', src: Residential1 },
     { type: 'image', src: Residential2 },
@@ -108,6 +108,13 @@ const Electric = () => {
     { type: 'image', src: Residential20 },
     { type: 'image', src: Residential21 }
   ];
+
+  // // Installation Generator media (array of objects with type)
+  // const installationGeneratorMedia = [
+  //   { type: 'image', src: InstallationGenerator1 },
+  //   { type: 'image', src: InstallationGenerator2 },
+  //   { type: 'video', src: InstallationGenerator3 }
+  // ];
 
   // For cleaner rows
   const industrialFirstRow = industrialImages.slice(0, 7);
@@ -147,54 +154,106 @@ const Electric = () => {
     setSelectedVideo(null);
   };
 
-  // FIXED: now supports residential
+  // Get current gallery array
   const getCurrentGallery = () => {
-    if (currentGallery === 'industrial') return industrialImages;
-    if (currentGallery === 'commercial') return commercialImages;
-    if (currentGallery === 'residential') return residentialMedia.map(i => i.src);
-    return installationGeneratorMedia.map(i => i.src);
+    switch(currentGallery) {
+      case 'industrial':
+        return industrialImages;
+      case 'commercial':
+        return commercialImages;
+      case 'residential':
+        return residentialMedia;
+      case 'installationGenerator':
+        return installationGeneratorMedia;
+      default:
+        return industrialImages;
+    }
   };
 
   const handleNextImage = () => {
     const gallery = getCurrentGallery();
-    const currentIndex = gallery.indexOf(selectedImage || selectedVideo);
-    const nextIndex = (currentIndex + 1) % gallery.length;
-
-    const nextSrc = gallery[nextIndex];
-    const nextItem =
-      installationGeneratorMedia.find(i => i.src === nextSrc) ||
-      residentialMedia.find(i => i.src === nextSrc);
-
-    if (nextItem?.type === 'video') {
-      setSelectedVideo(nextItem.src);
-      setSelectedImage(null);
+    const currentItem = selectedImage || selectedVideo;
+    
+    // Find current index
+    let currentIndex = -1;
+    
+    if (currentGallery === 'industrial' || currentGallery === 'commercial') {
+      // For simple string arrays
+      currentIndex = gallery.indexOf(currentItem);
     } else {
-      setSelectedImage(nextSrc);
+      // For object arrays (residential, installationGenerator)
+      currentIndex = gallery.findIndex(item => item.src === currentItem);
+    }
+    
+    if (currentIndex === -1) return;
+    
+    const nextIndex = (currentIndex + 1) % gallery.length;
+    
+    if (currentGallery === 'industrial' || currentGallery === 'commercial') {
+      // Simple string arrays - always images
+      setSelectedImage(gallery[nextIndex]);
       setSelectedVideo(null);
+    } else {
+      // Object arrays - check type
+      const nextItem = gallery[nextIndex];
+      if (nextItem.type === 'video') {
+        setSelectedVideo(nextItem.src);
+        setSelectedImage(null);
+      } else {
+        setSelectedImage(nextItem.src);
+        setSelectedVideo(null);
+      }
     }
   };
 
   const handlePrevImage = () => {
     const gallery = getCurrentGallery();
-    const currentIndex = gallery.indexOf(selectedImage || selectedVideo);
-    const prevIndex = (currentIndex - 1 + gallery.length) % gallery.length;
-
-    const prevSrc = gallery[prevIndex];
-    const prevItem =
-      installationGeneratorMedia.find(i => i.src === prevSrc) ||
-      residentialMedia.find(i => i.src === prevSrc);
-
-    if (prevItem?.type === 'video') {
-      setSelectedVideo(prevItem.src);
-      setSelectedImage(null);
+    const currentItem = selectedImage || selectedVideo;
+    
+    // Find current index
+    let currentIndex = -1;
+    
+    if (currentGallery === 'industrial' || currentGallery === 'commercial') {
+      // For simple string arrays
+      currentIndex = gallery.indexOf(currentItem);
     } else {
-      setSelectedImage(prevSrc);
+      // For object arrays (residential, installationGenerator)
+      currentIndex = gallery.findIndex(item => item.src === currentItem);
+    }
+    
+    if (currentIndex === -1) return;
+    
+    const prevIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+    
+    if (currentGallery === 'industrial' || currentGallery === 'commercial') {
+      // Simple string arrays - always images
+      setSelectedImage(gallery[prevIndex]);
       setSelectedVideo(null);
+    } else {
+      // Object arrays - check type
+      const prevItem = gallery[prevIndex];
+      if (prevItem.type === 'video') {
+        setSelectedVideo(prevItem.src);
+        setSelectedImage(null);
+      } else {
+        setSelectedImage(prevItem.src);
+        setSelectedVideo(null);
+      }
     }
   };
 
   // Universal render function
   const renderMediaItem = (item, index, gallery) => {
+    // Handle simple string items (industrial, commercial)
+    if (typeof item === 'string') {
+      return (
+        <div key={index} className="project-card" onClick={() => handleImageClick(item, gallery)}>
+          <img src={item} className="project-image" alt={`Project ${index + 1}`} />
+        </div>
+      );
+    }
+    
+    // Handle object items with type property (residential, installationGenerator)
     if (item.type === 'video') {
       return (
         <div key={index} className="project-card" onClick={() => handleVideoClick(item.src, gallery)}>
@@ -208,7 +267,7 @@ const Electric = () => {
 
     return (
       <div key={index} className="project-card" onClick={() => handleImageClick(item.src, gallery)}>
-        <img src={item.src} className="project-image" />
+        <img src={item.src} className="project-image" alt={`Project ${index + 1}`} />
       </div>
     );
   };
@@ -234,6 +293,7 @@ const Electric = () => {
         <button className={`tab-button ${currentGallery === 'residential' ? 'active' : ''}`} onClick={() => setCurrentGallery('residential')}>Residential</button>
         <button className={`tab-button ${currentGallery === 'commercial' ? 'active' : ''}`} onClick={() => setCurrentGallery('commercial')}>Commercial</button>
         <button className={`tab-button ${currentGallery === 'industrial' ? 'active' : ''}`} onClick={() => setCurrentGallery('industrial')}>Industrial</button>
+        {/* <button className={`tab-button ${currentGallery === 'installationGenerator' ? 'active' : ''}`} onClick={() => setCurrentGallery('installationGenerator')}>Installation Generator</button> */}
       </div>
 
       {/* Industrial */}
@@ -267,18 +327,10 @@ const Electric = () => {
           </div>
 
           <div className="images-row">
-            {industrialFirstRow.map((img, i) => (
-              <div key={i} className="project-card" onClick={() => handleImageClick(img, 'industrial')}>
-                <img src={img} className="project-image" />
-              </div>
-            ))}
+            {industrialFirstRow.map((img, i) => renderMediaItem(img, i, 'industrial'))}
           </div>
           <div className="images-row">
-            {industrialSecondRow.map((img, i) => (
-              <div key={i + 7} className="project-card" onClick={() => handleImageClick(img, 'industrial')}>
-                <img src={img} className="project-image" />
-              </div>
-            ))}
+            {industrialSecondRow.map((img, i) => renderMediaItem(img, i + 7, 'industrial'))}
           </div>
         </div>
       )}
@@ -308,18 +360,10 @@ const Electric = () => {
           </div>
 
           <div className="images-row">
-            {commercialFirstRow.map((img, i) => (
-              <div key={i} className="project-card" onClick={() => handleImageClick(img, 'commercial')}>
-                <img src={img} className="project-image" />
-              </div>
-            ))}
+            {commercialFirstRow.map((img, i) => renderMediaItem(img, i, 'commercial'))}
           </div>
           <div className="images-row">
-            {commercialSecondRow.map((img, i) => (
-              <div key={i + 6} className="project-card" onClick={() => handleImageClick(img, 'commercial')}>
-                <img src={img} className="project-image" />
-              </div>
-            ))}
+            {commercialSecondRow.map((img, i) => renderMediaItem(img, i + 6, 'commercial'))}
           </div>
         </div>
       )}
@@ -349,7 +393,7 @@ const Electric = () => {
       )}
 
       {/* Installation Generator */}
-      {currentGallery === 'installationGenerator' && (
+      {/* {currentGallery === 'installationGenerator' && (
         <div className="projects-section">
           <h2 className="section-title">Installation Generator Projects</h2>
           <div className="images-row">
@@ -358,7 +402,7 @@ const Electric = () => {
             )}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Modal */}
       {isModalOpen && (
@@ -367,7 +411,7 @@ const Electric = () => {
             <button className="modal-close" onClick={closeModal}>×</button>
             <button className="modal-nav modal-prev" onClick={handlePrevImage}>‹</button>
 
-            {selectedImage && <img src={selectedImage} className="modal-image" />}
+            {selectedImage && <img src={selectedImage} className="modal-image" alt="Enlarged view" />}
             {selectedVideo && (
               <video src={selectedVideo} controls autoPlay className="modal-video" />
             )}
