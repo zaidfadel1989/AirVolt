@@ -3,7 +3,6 @@
     position: static !important;
 }
 
-
 #header::before{
     content: "";
     position: absolute;
@@ -14,17 +13,6 @@
     height: 50%;
     background: linear-gradient(to top,transparent 0%, rgb(255, 0, 0) 90%);
 }
-
-.timing-image-container {
-  margin: 20px 0;
-  max-width: 250px; /* Adjust as needed */
-}
-
-.timing-image-container img {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 
 .highlight {
   background: linear-gradient(700deg, #fc0400, #0613cc);
@@ -83,90 +71,87 @@
     transform: scale(1.1);
 }
 
-/* Opening Hours Styles - Transparent to match background */
-.opening-hours {
-  margin-top: 20px;
-  padding: 15px 0; /* Removed horizontal padding to keep it clean */
-  display: inline-block;
+/* Timing Image Styles */
+.timing-image-container {
+  margin: 25px 0;
+  display: inline-block; /* Keeps it left-aligned on desktop */
 }
 
-.opening-hours p {
-  margin: 0;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: var(--text-color); /* Use your text color variable */
+.timing-img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
-/* Remove the clock icon and background styling */
-/*
-.opening-hours::before {
-  content: "⏰";
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-*/
-
-@media(max-width:1024px){
-    #header .container *{
-        text-align: center;
-    }
-
-    .timing-image-container {
-  margin: 20px 0;
-  max-width: 218px; /* Adjust as needed */
+/* Desktop - keep left-aligned */
+@media (min-width: 1025px) {
+  .timing-image-container {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
-    #header .container > .row{
-        flex-direction: column;
-        align-items: center; /* Center align for mobile */
-    }
+/* Tablet & Mobile - center the image */
+@media (max-width: 1024px) {
+  #header .container * {
+    text-align: center;
+  }
 
-    #header .container .row .column:last-child{
-        padding-top: 10px; /* Less padding on mobile */
-        order: -1; /* Optional: move image above text on mobile */
-    }
+  #header .container > .row {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #header .container .buttons__container{
-        justify-content: center;
-    }
-    
-    /* Mobile responsive adjustments for opening hours */
-    .opening-hours {
-        display: block;
-        text-align: center;
-        margin: 20px auto;
-        max-width: 300px;
-    }
+  #header .container .row .column:last-child {
+    padding-top: 10px;
+    order: -1;
+  }
+
+  #header .container .buttons__container {
+    justify-content: center;
+  }
+  
+  /* Center timing image on mobile/tablet */
+  .timing-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+  }
+  
+  .timing-img {
+    margin: 0 auto;
+  }
 }
 
-@media(max-width:500px){
+@media (max-width: 500px) {
+  .highlight {
+    text-decoration: none;
+  }
 
+  .description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .timing-image-container {
-  margin: 20px 0;
-  max-width: 210px; /* Adjust as needed */
+  #header .container .row .column:last-child {
+    padding-top: 5px;
+  }
+  
+  /* Adjust timing image size for small screens */
+  .timing-img {
+    max-width: 200px;
+  }
 }
 
-
-    .highlight {
-        text-decoration: none;
-    }
-
-    .description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    #header .container .row .column:last-child{
-        padding-top: 5px; /* Minimal padding on very small screens */
-    }
-    
-    /* Small screen adjustments for opening hours */
-    .opening-hours {
-        font-size: 0.9rem;
-    }
-    .opening-hours p {
-        font-size: 1rem;
-    }
+/* Very small screens */
+@media (max-width: 375px) {
+  .timing-img {
+    max-width: 180px;
+  }
 }

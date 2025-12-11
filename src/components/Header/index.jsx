@@ -1,13 +1,11 @@
 import React, { useRef } from 'react'
 import "./Header.css"
 import { hero_image } from "../../assets";
+import timingImage from '../../assets/timing.png'; // Import timing image
 import { Link } from "react-scroll";
 import Achievement from '../Achievement'
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react";
-
-// Import the timing image (adjust the path according to your project structure)
-import timingImage from '../../assets/timing.png'; // or from your assets if you prefer
 
 const Header = () => {
   const container = useRef(null);
@@ -50,8 +48,14 @@ const Header = () => {
               We're committed to powering your home safely and efficiently.<br />With years of hands-on experience and a passion for precision,<br /> we provide reliable electrical services designed to meet the unique <br />needs of every household. From simple repairs to full installations,<br /> we bring expert care right to your doorstep.
             </p>
             
-            {/* Timing Image Section - Replacing the text */}
-            
+            {/* Timing Image Section */}
+            <div className='timing-image-container'>
+              <img 
+                src={timingImage} 
+                alt="Opening Hours: Monday to Saturday 8AM-6PM, Sunday Closed" 
+                className='timing-img'
+              />
+            </div>
             
             <div className='buttons__container'>
               <Link to="services" smooth={true} className="btn">Our Services</Link>
@@ -68,17 +72,7 @@ const Header = () => {
         </div>
         
         <Achievement />
-        <div className="timing-image-container">
-              <img 
-                src={timingImage} 
-                alt="Opening Hours: Monday to Saturday 8AM-6PM, Sunday Closed" 
-                style={{ 
-                  maxWidth: '100%', 
-                  height: 'auto',
-                  display: 'block'
-                }}
-              />
-            </div>
+        
       </div>
     </header>
   )

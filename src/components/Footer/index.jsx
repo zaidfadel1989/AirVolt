@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import MapImage from "../../assets/Map.jpg";
+import timingImage from '../../assets/timing.png'; // or from your assets if you prefer
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,14 +19,33 @@ const Footer = () => {
                 <p className="brand-tagline">
                   Your Trusted Electrical & HVAC Experts. Professional, reliable service for Chicago homes and businesses.
                 </p>
+                <div className="timing-image-container">
+              <img 
+                src={timingImage} 
+                alt="Opening Hours: Monday to Saturday 8AM-6PM, Sunday Closed" 
+                style={{ 
+                  maxWidth: '100%', 
+                  height: 'auto',
+                  display: 'block'
+                }}
+              />
+            </div>
                 <div className="certifications">
                   <span className="cert-badge">Licensed</span>
                   <span className="cert-badge">Insured</span>
-                  <span className="cert-badge">EPA Certified</span>
                   <span className="cert-badge">Bonded</span>
+                  <span className="cert-badge">EPA Certified</span>
+                  
                 </div>
               </div>
             </div>
+
+
+
+
+
+
+            
 
             {/* Quick Links */}
             <div className="footer-column links-column">
@@ -83,10 +103,12 @@ const Footer = () => {
                   Serving: <strong>Cook County</strong>, <strong>DuPage County</strong>, <strong>Lake County</strong>, 
                   <strong>Williams County</strong>, <strong>City of Chicago</strong>, and surrounding areas including parts of <strong>Indiana</strong>
                 </p>
+                
               </div>
 
           </div>
         </div>
+        
       </div>
 
 
