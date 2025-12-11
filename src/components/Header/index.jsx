@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import "./Header.css"
 import { hero_image } from "../../assets";
-import timingImage from '../../assets/timing.png'; // Import timing image
 import { Link } from "react-scroll";
 import Achievement from '../Achievement'
 import gsap from 'gsap'
@@ -25,10 +24,10 @@ const Header = () => {
         ".description",
         { opacity: 0, y: -30 }
       )
-      .from(
-        ".timing-image-container",
-        { opacity: 0, y: -20 }
-      )
+      // .from(
+      //   ".timing-image-container",
+      //   { opacity: 0, y: -20 }
+      // )
       .from(
         ".buttons__container",
         { opacity: 0, y: 40 }
@@ -48,14 +47,14 @@ const Header = () => {
               We're committed to powering your home safely and efficiently.<br />With years of hands-on experience and a passion for precision,<br /> we provide reliable electrical services designed to meet the unique <br />needs of every household. From simple repairs to full installations,<br /> we bring expert care right to your doorstep.
             </p>
             
-            {/* Timing Image Section */}
+            {/* Timing Image Section
             <div className='timing-image-container'>
               <img 
                 src={timingImage} 
                 alt="Opening Hours: Monday to Saturday 8AM-6PM, Sunday Closed" 
                 className='timing-img'
               />
-            </div>
+            </div> */}
             
             <div className='buttons__container'>
               <Link to="services" smooth={true} className="btn">Our Services</Link>
