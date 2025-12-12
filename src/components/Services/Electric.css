@@ -415,7 +415,7 @@
 
 
 
-@media (max-width: 890px){
+@media (max-width: 1120px){
 .modal-prev {
     left: 15px !important; /* Move inside on mobile */
   }
