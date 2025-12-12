@@ -63,7 +63,7 @@ useGSAP(()=>{
         </div>
         <div className='column'> 
           <h1 className='title'>
-            <span className='g-text'>About Us</span>
+            <span className='g-text'>About</span>
           </h1>
           <h3 className='sub__title'>Realizing visions through fundamental focus.</h3>
         <div className='company__media__container'>
