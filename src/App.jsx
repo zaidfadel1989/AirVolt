@@ -33,7 +33,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/YahYa-GH">
+    <BrowserRouter basename="/AirVolt">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

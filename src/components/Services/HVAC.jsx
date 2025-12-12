@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './HVAC.css';
+import "./HVAC.css";
+
 
 // Import all HVAC images from the HVAC folder
 import HVAC1 from '../../assets/HVAC/HVAC1.jpg';
