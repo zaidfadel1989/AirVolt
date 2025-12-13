@@ -460,7 +460,13 @@
 
 
 
-@media (max-width: 643px) {
+
+
+
+
+
+
+@media (max-width: 543px) {
 
 
 
@@ -592,24 +598,6 @@
 }
 
 
-
-@media (max-width: 651px) {
-  .hvac-header {
-    position: relative !important;
-    min-height: 180px !important;
-    padding-bottom: 60px !important; /* Add space for the button */
-  }
-  
-  .hvac-header-buttons {
-    position: absolute !important;
-    bottom: 20px !important;
-    right: 20px !important;
-    left: auto !important;
-    display: flex;
-    gap: 1rem;
-    margin: 0 !important;
-  }
-}
 
 
 
