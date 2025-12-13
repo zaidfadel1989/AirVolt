@@ -85,7 +85,7 @@ const settings = {
           <div className='details'>
             <h3 className='name'>{project.title}</h3>
             <p className='text__muted description'>{project.description}</p>
-            <button className='btn'>Read more</button>
+            {/* <button className='btn'>Read more</button> */}
           </div>
 
         </React.Fragment>
