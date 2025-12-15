@@ -158,9 +158,11 @@
   }
 
   .logo .icon__container img {
-    height: 75px;
-    margin-left: 60px;
-    transform: scaleX(2.00);
+    
+    height: 60px;
+    margin-left: 48px;
+    margin-top: 0px;
+    transform: scaleX(1.80);
   }
 
   .logo .name,
@@ -179,9 +181,11 @@
     display: none;
   }
 
-   .logo .icon__container img {
-    height: 72px;
-    margin-left: 60px;
+    .logo .icon__container img {
+    
+    height: 55px;
+    margin-left: 50px;
+    margin-top: 0px;
     transform: scaleX(1.80);
   }
 
