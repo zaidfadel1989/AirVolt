@@ -2,7 +2,7 @@ name: Deploy Vite React App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -30,6 +30,12 @@ jobs:
           path: dist
 
   deploy:
+    # ========== ADD THESE LINES ==========
+    environment:
+      name: github-pages
+      url: https://airvoltpro.com
+    # =====================================
+    
     needs: build
     runs-on: ubuntu-latest
     permissions:
