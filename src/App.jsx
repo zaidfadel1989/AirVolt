@@ -1,5 +1,6 @@
 // App.jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -14,7 +15,6 @@ import Footer from "./components/Footer";
 
 import Electric from "./components/Services/Electric";
 import HVAC from "./components/Services/HVAC";
-<Route path="/hvac" element={<HVAC />} />
 
 function Home() {
   return (
@@ -33,7 +33,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/AirVolt">
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
