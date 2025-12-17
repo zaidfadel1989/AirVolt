@@ -33,7 +33,7 @@ jobs:
     # ========== ADD THESE LINES ==========
     environment:
       name: github-pages
-      url: https://airvoltpro.com
+      url: https://zaidfadel1989.github.io/AirVolt
     # =====================================
     
     needs: build
